@@ -63,6 +63,7 @@
 /* -- FRAMEWORK -- */
 .wrapper {
 	margin: 0 auto;
+	width: 1170px;
 }
 
 .row {
@@ -79,3 +80,49 @@
 /*--------------------------------------------------------------
 7.0 - UTILITIES
 -------------------------------------------------------------- */
+
+
+/*UNIVERSAL*/
+
+/*HOME PAGE*/
+#home .row > header, .col-1-2 {
+	float: left;
+}
+
+nav, .col-1-2:last-child {
+	float: right;
+}
+
+#home a {
+	text-decoration: none;
+}
+
+nav li, footer li {
+	display: inline-block;
+}
+
+h1, footer > div:first-child a {
+	display: none;
+}
+
+a, br + span {
+	text-transform: uppercase;
+}
+
+#home .row > header {
+	width: 210px;
+	height: 140px;
+}
+
+/*ABOUT*/
+
+
+
+/*ACTION*/
+
+
+
+
+
+
+
