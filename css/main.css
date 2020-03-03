@@ -89,11 +89,11 @@
 /*UNIVERSAL*/
 
 /*HOME PAGE*/
-.row > header, .col-1-2, .col-1-3, #about > .wrapper nav {
+.row > header, .col-1-2, .col-1-3, #bg-about + .wrapper nav {
 	float: left;
 }
 
-section nav, .col-1-2:last-child, .col-1-3:last-child, #about > .wrapper .row > div {
+section nav, header nav, .col-1-2:last-child, .col-1-3:last-child, #bg-about + .wrapper .row > div {
 	float: right;
 }
 
@@ -101,11 +101,11 @@ a {
 	text-decoration: none;
 }
 
-section nav li, section nav a, footer li, footer a {
+header nav li, header nav a, footer li, footer a {
 	display: inline-block;
 }
 
-h1, footer span {
+h1, body > footer span {
 	display: none;
 }
 
@@ -113,7 +113,7 @@ a, br + span {
 	text-transform: uppercase;
 }
 
-#home > section p:nth-child(2) {
+#sustainability {
 	font-family: 'EB Garamond', serif;
 	font-weight: 400;
 	font-size: 42px;
@@ -122,21 +122,17 @@ a, br + span {
 	margin: 50px 0 25px;
 }
 
-#home > section > .wrapper p {
+header > .wrapper p {
 	color: #fff;
 }
 
-#home > section span, #about > section p, #action > section p {
+#banner-text{
 	font-family: 'Montserrat', sans-serif;
 	font-style: normal;
 	font-weight: 700;
 	font-size: 85px;
 	letter-spacing: -2px;
 	display: block;
-}
-
-#home > section span {
-	margin-top: -2px;
 }
 
 .btn-grn {
@@ -157,7 +153,7 @@ a, br + span {
 	background-color: #1F1F1F;
 }
 
-#home > section {
+#bg-home {
 	background-image: url("../img/bg-home.jpeg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -165,7 +161,7 @@ a, br + span {
 	height: 520px;
 }
 
-#home > section header, #about > section header, #action > section header {
+#bg-home header, #bg-about header, #bg-action header {
 	background-image: url("../img/logo-bedford.png");
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -174,18 +170,18 @@ a, br + span {
 	height: 130px;
 }
 
-section nav {
+header nav {
 	margin-top: 20px;
 }
 
-section nav a {
+header nav a {
 	color: #fff;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 600;
 	font-size: 14px;
 }
 
-section nav li:last-child a {
+header nav li:last-child a {
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	-ms-border-radius: 20px;
@@ -195,84 +191,67 @@ section nav li:last-child a {
 	padding: 4px 10px 3px;
 }
 
-section nav li:nth-child(2) a, section nav li:last-child a {
+header nav li:nth-child(2) a, header nav li:last-child a {
 	margin-left: 10px;
 }
 
-section nav a:hover {
+header nav a:hover {
 	color: #1F1F1F;
 }
 
-section nav li:last-child a:hover {
+header nav li:last-child a:hover {
 	background-color: #fff;
 }
 
-#home, #action {
+#bg-action + div, #bg-home, #bg-home + div, footer {
 	text-align: center;
 }
 
-#home .wrapper > section, #about h2, #action h2 {
+h2, #bg-home + div > p:first-child {
 	font-family: 'EB Garamond', serif;
 }
 
-#home .wrapper > section, #action h2 {
+#bg-action + div > p:first-child {
 	margin: 90px 0 120px;
 }
 	
-#home .wrapper > section, h2 {
+.wrapper > header, h2, #bg-home + div > p:first-child {
 	font-weight: 400;
 }
 
-h2 {
+h2, #bg-home + div > p:first-child {
 	font-size: 30px;
+	margin-top: 90px;
 }
 
-#home .wrapper > section div {
+#bg-home + div footer {
+	margin: 30px 0 120px;
+}
+
+#bg-home + div > div > p {
 	width: 600px;
 	margin: 40px auto 10px;
 }
 
-#home .wrapper > section p {
+#bg-home + div > p {
 	font-size: 17px;
 	line-height: 25px;
 }
 
-#home .wrapper > section footer {
+#bg-home + div footer {
 	font-style: italic;
 	font-size: 17px;
-}
-
-#home .wrapper > section span {
-	color: #36B3AC;
 }
 
 .col-1-2 {
 	width: 520px;
 }
 
-.col-1-2 div:first-child {
-	height: 300px;
-	background-size: cover;
-	repeat: none;
-}
-
-.col-1-2:first-child div:first-child {
-	background-image: url("../img/bg-about.jpeg");
-}
-
-.col-1-2:last-child div:first-child {
-	background-image: url("../img/bg-action.jpg");
-}
-
-.col-1-2 div:first-child p {
-	display: none;
-}
-
 .col-1-2 header {
 	margin: 30px 0;
 }
 
-h3, #about > .wrapper nav {
+h3, #bg-about + .wrapper nav {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	font-size: 14px;
@@ -281,7 +260,7 @@ h3, #about > .wrapper nav {
 	color: #BDBDBD;
 }
 
-.col-1-2 div:nth-child(3) p, .col-1-3 div p, #about section > header + p, blockquote p, #about .row div li {
+.col-1-2 div:nth-child(3) p, .col-1-3 div p, #bg-about + .wrapper section > header + p, blockquote p, #bg-about + .wrapper .row div li, #bg-home + div > div > p {
 	font-family: 'EB Garamond', serif;
 	font-size: 18px;
 	line-height: 25px;
@@ -360,14 +339,14 @@ address li:nth-child(2) {
 	margin: 0 50px;
 }
 
-#about > section p, #action > section p {
+#bg-about p, #bg-action p {
 	text-align: center;
 	text-transform: uppercase;
 	color: white;
 	margin-top: 80px;
 }
 
-#about > section {
+#bg-about {
 	background-image: url("../img/bg-about.jpeg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -375,7 +354,7 @@ address li:nth-child(2) {
 	height: 450px
 }
 
-#action > section {
+#bg-action {
 	background-image: url("../img/bg-action.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -387,7 +366,7 @@ footer {
 	text-align: center;
 }
 
-#action .wrapper > header {
+#bg-action + .wrapper > header {
 	width: 700px;
 	margin: 0 auto;
 }
@@ -400,40 +379,40 @@ footer {
 	margin: 0 60px;
 }
 
-#action > .wrapper .row {
+#bg-action + .wrapper .row {
 	margin-bottom: 100px;
 }
 
-#about > .wrapper nav {
+#bg-about + .wrapper nav {
 	width: 300px;
 }
 
-#about > .wrapper nav li, #about > .wrapper nav a {
+#bg-about + .wrapper nav li, #bg-about + .wrapper nav a {
 	display: block;
 }
 
-#about > .wrapper nav li, #about > .wrapper nav p {
+#bg-about + .wrapper nav li, #bg-about + .wrapper nav p {
 	margin-bottom: 2px;
 }
 	
-#about > .wrapper nav a {
+#bg-about + .wrapper nav a {
 	color: #BDBDBD;
 }
 
-#about > .wrapper nav li:first-child {
+#bg-about + .wrapper nav li:first-child {
 	color: #1F1F1F;
 }
 
-#about > .wrapper nav a:hover {
+#bg-about + .wrapper nav a:hover {
 	color: #36B3AC;
 }
 
-#about > .wrapper nav ul {
+#bg-about + .wrapper nav ul {
 	padding: 0;
 	margin-top: 0;
 }
 
-#about > .wrapper nav p {
+#bg-about + .wrapper nav p {
 	font-family: 'EB Garamond', serif;
 	font-weight: 400;
 	font-size: 17px;
@@ -444,29 +423,29 @@ footer {
 	color: #36B3AC;
 }
 
-#about > .wrapper .row > div {
+#bg-about + .wrapper .row > div {
 	width: 750px;
 }
 
-#about > .wrapper div div > header {
+#bg-about + .wrapper div div > header, #bg-action + .wrapper > header {
 	padding-bottom: 40px;
 }
 
-#about h2, #action h2 {
+#bg-about + .wrapper h2, #bg-action + .wrapper h2 {
 	line-height: 45px;
 }
 
-#about h2 {
+#bg-about + .wrapper h2 {
 	margin-top: 0;
 }
 
-#about > .wrapper > .row {
+#bg-about + .wrapper > .row {
 	padding-top: 90px;
 }
 
 blockquote {
 	padding: 50px 0 45px;
-	margin: 0;
+	margin: 90px 0 0;
 	border-top: 2px solid #BDBDBD;
 	border-bottom: 2px solid #BDBDBD;
 }
@@ -490,14 +469,14 @@ blockquote footer p {
 	color: #BDBDBD;
 }
 
-#about .row div ul {
+section > ul {
 	column-count: 2;
 	column-gap: 80px;
 	margin-top: 0;
 	padding: 0;
 }
 
-#about .row div li {
+section > ul li {
 	display: block;
 	hyphens: manual;
 	break-inside: avoid;
@@ -509,6 +488,15 @@ blockquote footer p {
 
 section:nth-child(4) {
 	padding: 60px 0 90px;
+}
+
+span a {
+	text-transform: capitalize;
+	color: #36B3AC;;
+}
+
+span a:hover {
+	color: #1F1F1F;
 }
 
 /*ABOUT*/
