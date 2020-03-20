@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bedford Foundation</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,600iU+007CMontserrat:400,600,700U+007CSource+Sans+Pro&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	
+</head>
+
+<body>
+	
+	<header id="bg-home">
+		<div class="wrapper">
+			<div class="row">
+				<div>
+					<h1>Bedford Foundation</h1>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="take-action.html">Take Action</a></li>
+					</ul>
+				</nav>
+			</div>
+			<p>Sustainability<br><span>starts with you</span></p>
+			<p><a class="btn-grn" href="take-action.html">Learn More</a></p>
+		</div>
+	</header>
+	
+	<div class="wrapper">
+		<p>We conserve land through outreach, restoration, and research.</p>
+		<div>
+			<p>Some of the Earth's greatest landscapes are threatened by increased road construction, oil and gas exploration, and mining. We aim to protect these areas from inappropriate development, but we cannot achieve our goals alone. Find out how you can help.</p>
+			<p>All photography provided by <a href="http://www.instagram.com" target="_blank">Jared Chambers</a></p>
+		</div>
+		<div class="row">
+			<section class="col-1-2">
+				<img src="img/bg-about.jpeg" alt="Seaside Bridge">
+				<header>
+					<h2>About</h2>
+				</header>
+				<div>
+					<p>Find out about our organization, mission, our methods, and the results of our decades of advocacy.</p>
+				</div>
+				<p><a class="btn-grn" href="about.html">Learn More</a></p>
+			</section>
+			<section class="col-1-2">
+				<img src="img/bg-action.jpg" alt="Woman By Rainforest Waterfall">
+				<header>
+					<h2>Take Action</h2>
+				</header>
+				<div>
+					<p>Ready to take the next step? You can become a contributor to our cause, or participate yourself.</p>
+				</div>
+				<p><a class="btn-grn" href="take-action.html">Find Out How</a></p>
+			</section>
+		</div>
+	</div>
+	
+	<footer>
+		<div>
+			<div class="wrapper">
+				<ul>
+					<li><a href="http://www.facebook.com" target="_blank"><span>Facebook</span></a></li>
+					<li><a href="http://www.flickr.com" target="_blank"><span>Flickr</span></a></li>
+					<li><a href="http://www.twitter.com" target="_blank"><span>Twitter</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<address class="wrapper">
+			<ul>
+				<li><a href="https://www.google.com/maps/place/459+Broadway,+New+York,+NY+10013/@40.7208592,-74.00315,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2598bd3fc4031:0x48b829f544b1ce3f!8m2!3d40.7208592!4d-74.0009613" target="_blank">459 Broadway, New York</a></li>
+				<li><a href="tel:+12125550123">(212) 555-0123</a></li>
+				<li><a href="mailto:template@gmail.com">template@gmail.com</a></li>			
+			</ul>
+		</address>
+	</footer>
+	
+	<!-- JAVASCRIPT -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		// Select all links with hashes
+		$('a[href*="#"]')
+		  // Remove links that don't actually link to anything
+		  .not('[href="#"]')
+		  .not('[href="#0"]')
+		  .click(function(event) {
+			// On-page links
+			if (
+			  location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+			  && 
+			  location.hostname == this.hostname
+			) {
+			  // Figure out element to scroll to
+			  var target = $(this.hash);
+			  target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			  // Does a scroll target exist?
+			  if (target.length) {
+				// Only prevent default if animation is actually gonna happen
+				event.preventDefault();
+				$('html, body').animate({
+				  scrollTop: target.offset().top
+				}, 1000, function() {
+				  // Callback after animation
+				  // Must change focus!
+				  var $target = $(target);
+				  $target.focus();
+				  if ($target.is(":focus")) { // Checking if the target was focused
+					return false;
+				  } else {
+					$target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+					$target.focus(); // Set focus again
+				  };
+				});
+			  }
+			}
+		  });
+	</script>
+	
+</body>
+</html>
